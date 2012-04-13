@@ -10,7 +10,7 @@ Say you have some foolishly-optimistic code, like:
 (parse-json (drakma:http-request ...))
 ```
 
-With this library, just insert `HANDLE-HTTP-REQUEST`
+With this library, just insert `HANDLE-HTTP-RESPONSE`
 
 ```common-lisp
 (parse-json (multiple-value-call #'handle-http-response
