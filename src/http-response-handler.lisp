@@ -364,7 +364,7 @@
             ;; TODO: How to handle non-error statuses? Any additional
             ;;       help we can offer?
             (cond ((<= 100 status-code 399)
-                   (values-list results))
+                   (values body status-code headers uri))
                   ((<= 400 status-code 499)
                    (error 'http-client-error
                           :body body
