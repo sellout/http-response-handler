@@ -353,7 +353,7 @@
                       (uri condition)
                       (seconds-until-retry condition))))))
 
-(defun handle-http-response (body status-code headers uri &rest ignored)
+(defun handle-http-response (body status-code &optional headers uri &rest ignored)
   "Wrap this around a call to DRAKMA:HTTP-REQUEST, and it either returns the
    same values or signals an HTTP-ERROR."
   (declare (ignore ignored))
